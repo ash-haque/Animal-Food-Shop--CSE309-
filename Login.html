@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .parent1 {
+            display: flex;
+            height: 100vh;
+            background-color: beige;
+            justify-content: center;
+            align-items: center;
+           
+
+        }
+
+        .parent {
+          
+            background-color: bisque;
+            width: 50%;
+            border-radius: 2rem;
+            background-origin: content-box;
+
+            
+
+        }
+
+        .password {
+            padding: 10px;
+        }
+
+        .id {
+            padding: 10px;
+        }
+
+        .submit {
+            padding: 10px;
+        }
+
+        .forgetpass {
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            
+
+        }
+
+        .login {
+            margin-left: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent1">
+        <div class="parent">
+
+            <h2 class="login">Login</h2>
+
+            <div class="id"><input type="text" placeholder="Enter Id:"></div>
+            <div class="password"> <input type="text" placeholder="Enter Password"></div>
+            <div class="submit" ><button  type="submit" > Submit</button></div>
+            <div class="forgetpass">
+                <p>Forget password? <a href="">click</a></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .parent {
+        height: 100vh;
+        background-color: azure;
+    }
+
+    .main {
+        width: 50%;
+        height: 73%;
+        background-color: antiquewhite;
+        border-radius: 15px;
+        box-shadow: 0 0 10px;
+        margin: auto;
+        margin-top: 30px;
+
+    }
+
+    h1 {
+        color: darkgreen;
+        text-align: center;
+    }
+    label{
+        
+        display: block;
+        font-weight: bold;
+        font-size: 1.5rem;
+        
+       
+    }
+    .information{
+        margin-top: 20px;
+    }
+    textarea,input,select{
+        padding: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        border: 1px solid white;
+        border-radius: 10px;
+        
+    }
+    button{
+        width: 100%;
+        padding: 10px;
+        border-radius: 15px;
+        background-color: bisque;
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+    button:hover{
+        text-decoration: underline;
+        background-color: aqua;
+    }
+</style>
+
+<body>
+    <div class="parent">
+        <div class="main">
+            <h1>Place Your Order Here...</h1>
+            <div class="information">
+                <form action="">
+                    <label for="foodname">Select Food:</label>
+                    
+                    <select name="product" id="name">
+                        <option value="">--Choose--</option>
+                        <option value="dogfood">Dog Food</option>
+
+                        <option value="Catfood">Cat Food</option>
+                        <option value="Fish Food">Fish Food</option>
+                        <option value="Dry Food">Dry Food</option>
+                        <option value="Bird Food">Bird Food</option>
+                    </select>
+                    <label for="quantity">Quantity (kg)</label>
+                    <input type="number" min="1" required>
+                    <label for="textarea">Address</label>
+                    <textarea name="address" id="location" required></textarea>
+                    <label for="number">Phone Number</label>
+                    <input type="text" required>
+                    <button>Submit</button>
+                </form>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</body>
+
+</html>

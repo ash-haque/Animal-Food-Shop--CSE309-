@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>.
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+        .parent{
+            height: 100vh;
+            background-color: bisque;
+        }
+        .header{
+            height: 15%;
+            background-color: green;
+            text-align: center;
+        }
+        .menu{
+            height: 10%;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            
+        }
+        .menu a {
+            color: white;
+            margin: auto;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+        }
+        .menu a:hover{
+            text-decoration: underline;
+
+        }
+        .details{
+            padding: 10%;
+            text-align: center;
+        }
+        .item{
+            background-color: beige;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 2%;
+            margin: 2%;
+            max-width: 50%;
+            margin-left: 25%;
+        }
+        .logout{
+            text-align: end;
+        }
+        .logout a:hover{
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div  class="parent">
+        <div class="header">
+            <h1>Welcome,Customer!</h1>
+            <p>Your pets favourite place</p>
+
+        </div>
+        <div class="menu">
+            <a href="">Make Payment</a>
+            <a href="customer_shop.html">Shop</a>
+            <a href="customer_order.html">Orders</a>
+            <a href="">Profile</a>
+        </div>
+        <div class="details">
+            <div class="item">
+                <h3>Order History</h3>
+                <p>you have ordered .... items </p>
+            </div>
+            <div class="item">
+                <h3>Recomanded Items</h3>
+                <p>Dry Cat Food, Dog Chew Toys, Bird Seeds...</p>
+            </div>
+            <div class="item">
+                <h3>Update</h3>
+                <p>Click to see updates</p>
+            </div>
+        </div>
+        <div class="logout">
+            <a href="Homepage.html">Log Out</a>
+        </div>
+    </div>
+    
+</body>
+</html>

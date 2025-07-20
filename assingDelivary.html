@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assing Delivary Boy</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .parent {
+        height: 100vh;
+        background-color: bisque;
+    }
+
+    .main {
+        width: 50%;
+        height: 73%;
+        background-color: antiquewhite;
+        border-radius: 15px;
+        box-shadow: 0 0 10px;
+        margin: auto;
+        margin-top: 30px;
+
+    }
+
+    h1 {
+        color: black;
+        font-weight: bold;
+        text-align: center;
+        height: 20%;
+    }
+    label{
+        
+        display: block;
+        font-weight: bold;
+        font-size: 1.5rem;
+        
+       
+    }
+    .information{
+        margin-top: 20px;
+    }
+    textarea,input,select{
+        padding: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        border: 1px solid white;
+        border-radius: 10px;
+        
+    }
+    .button{
+        width: 100%;
+        padding: 10px;
+        border-radius: 15px;
+        background-color: rgb(204, 87, 25);
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+    .button:hover{
+        text-decoration: none;
+        background-color: brown;
+    }
+    .heading{
+        background-color: green
+        
+    }
+    .backbutton{
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <div class="parent">
+        <div class="backbutton"><button><a href="admindashboard.html">Back</a></button></div>
+        <div class="main">
+            <h1 class="heading">Assing Your Delivary</h1>
+            <div class="information">
+                <form action="">
+                    <label for="boyname">Select A Delivary Boy:</label>
+                    
+                    <select name="boyname" id="name">
+                        <option value="">--Choose--</option>
+                        <option value="Emtiaz Ahmed">Emtiaz Ahme</option>
+
+                        <option value="Syed Samir">Syed Samir</option>
+                        <option value="Sabbir Islam">Sabbir Islam</option>
+                        <option value="Waes Ahmed">Waes Ahmed</option>
+                        <option value="Pavel">Pavel</option>
+                    </select>
+                    <label for="quantity">Order No :</label>
+                    <input type="number" required>
+                    <label for="textarea">Address</label>
+                    <textarea name="address" id="location" required></textarea>
+                    <label for="number">Phone Number</label>
+                    <input type="text" required>
+                    <button class="button">Assign Delivary</button>
+                </form>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</body>
+
+</html>

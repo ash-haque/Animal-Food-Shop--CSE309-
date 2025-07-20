@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .parent{
+            height: 100vh;
+            background-color: burlywood;
+        }
+        .tablepart{
+            background-color: antiquewhite;
+            width: 60%;
+            height: 50%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px;
+            margin: auto;
+            padding: 10px;
+            
+        }
+        table{
+            border-collapse: collapse;
+            margin: auto;
+
+        }
+        table th,table td{
+            border: 2px solid gray;
+            padding: 15px;
+            align-items: center;
+        }
+        table th {
+            background-color: rgb(162, 235, 235);
+        }
+        table td{
+            background-color: aliceblue;
+        }
+        .h2{
+            margin-bottom: 20px;
+            text-align: center;
+            color: brown;
+            
+        }
+        table button{
+            font-weight: bold;
+            background-color: rgb(220, 228, 220);
+        }
+        table button:hover{
+            background-color: brown;
+        }
+        h2{
+            color: brown;
+            text-align: center;
+            margin-top: auto;
+        }
+        .newproduct{
+            background-color: antiquewhite;
+            width: 60%;
+            height: 45%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px;
+            margin: auto;
+            padding: 10px;
+            margin-top: 10px;
+
+        }
+        label{
+            display: block;
+            font-weight: bold;
+        }
+        input,select{
+            border-radius: 5px;
+            padding: 5px;
+            width: 40%;
+        }
+        
+        .addbutton a{
+            color: red;
+
+        }
+        .addbutton{
+            margin-left: 200px;
+            text-decoration: none;
+        }
+        .addbutton:hover{
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="tablepart">
+            <h2 class="h2">Update Products</h2>
+            <table>
+                <tr>
+                    <th>Serial</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>ACtion</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Dog Food</td>
+                    <td>Dog</td>
+                    <td>550</td>
+                    <td>20 kg</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Cat Food</td>
+                    <td>Cat</td>
+                    <td>350</td>
+                    <td>25 kg</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Bird Food</td>
+                    <td>Bird</td>
+                    <td>650</td>
+                    <td>20 kg</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="newproduct">
+            <h2>Add New Product</h2>
+            <form action="">
+                <label for="name">Product Name :</label>
+                <input type="text" required>
+                <label for="type">Product Type :</label>
+                <select name="" id="" required>
+                    <option value="">Choose</option>
+                    <option value="">Dog</option>
+                    <option value="">Bird</option>
+                    <option value="">Cat</option>
+                    <option value="">Fish</option>
+                </select>
+                <label for="price">Price (kg) :</label>
+                <input type="text">
+                <label for="stock">Stock (kg)</label>
+                <input type="text">
+                <button class="addbutton"><a href="">Add Product</a></button>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
