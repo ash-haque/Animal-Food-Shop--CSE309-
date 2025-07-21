@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animal Food Categories</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: bisque;
+      color: black;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 20%;
+      background-color: #f2f2f2;
+      padding: 20px;
+      border-right: 2px solid #ddd;
+    }
+
+    .sidebar h3 {
+      margin-bottom: 15px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin: 10px 0;
+      padding: 8px;
+      background-color: #e0e0e0;
+      border-radius: 4px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .sidebar ul li:hover {
+      background-color: #d0d0d0;
+    }
+
+    .main-content {
+      width: 80%;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      background-color: #fff;
+      overflow-y: auto;
+    }
+
+    .food-card {
+      width: calc(33.33% - 20px);
+      background-color: #fafafa;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .food-card a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .food-card a:hover {
+      color: #f59393;
+    }
+
+    .food-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .food-card p {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar, .main-content {
+        width: 100%;
+      }
+
+      .food-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    🐾 Animal Food Shop - Categories 🐾
+  </header>
+
+  <div class="container">
+    <div class="sidebar">
+      <h3>Categories</h3>
+      <ul>
+        <li onclick="filterFood('all')">All</li>
+        <li onclick="filterFood('cat')">Cat Foods</li>
+        <li onclick="filterFood('dog')">Dog Foods</li>
+        <li onclick="filterFood('bird')">Bird Foods</li>
+        <li onclick="filterFood('fish')">Fish Foods</li>
+      </ul>
+    </div>
+
+    <div class="main-content" id="foodContainer">
+      <!-- Each card has clickable image + food name -->
+      <div class="food-card cat">
+        <a href="customer_shop.html">
+          <img src="Cat Tuna Treat pic.jpeg" alt="Cat Food 1">
+          <p>Cat Tuna Treat</p>
+        </a>
+      </div>
+      <div class="food-card cat">
+        <a href="customer_shop.html">
+          <img src="Whiskas Chicken pic.jpeg" alt="Cat Food 2">
+          <p>Whiskas Chicken</p>
+        </a>
+      </div>
+      <div class="food-card dog">
+        <a href="customer_shop.html">
+          <img src="Pedigree Adult pic.jpeg" alt="Dog Food 1">
+          <p>Pedigree Adult</p>
+        </a>
+      </div>
+      <div class="food-card dog">
+        <a href="customer_shop.html">
+          <img src="Drools Puppy picture.jpeg" alt="Dog Food 2">
+          <p>Drools Puppy</p>
+        </a>
+      </div>
+      <div class="food-card bird">
+        <a href="customer_shop.html">
+          <img src="Bird Seeds Mix picture.jpeg" alt="Bird Food 1">
+          <p>Bird Seeds Mix</p>
+        </a>
+      </div>
+      <div class="food-card bird">
+        <a href="customer_shop.html">
+          <img src="Parrot Pellets pictures.jpg" alt="Bird Food 2">
+          <p>Parrot Pellets</p>
+        </a>
+      </div>
+      <div class="food-card fish">
+        <a href="customer_shop.html">
+          <img src="Goldfish Flakes pictures fish food.png" alt="Fish Food 1">
+          <p>Goldfish Flakes</p>
+        </a>
+      </div>
+      <div class="food-card fish">
+        <a href="customer_shop.html">
+          <img src="Tropical Fish Bits bird food.jpg" alt="Fish Food 2">
+          <p>Tropical Fish Bits</p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function filterFood(category) {
+      const allCards = document.querySelectorAll('.food-card');
+
+      allCards.forEach(card => {
+        if (category === 'all') {
+          card.style.display = 'block';
+        } else {
+          if (card.classList.contains(category)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

@@ -18,18 +18,18 @@
             background-color: beige;
             justify-content: center;
             align-items: center;
-           
+
 
         }
 
         .parent {
-          
+
             background-color: bisque;
             width: 50%;
             border-radius: 2rem;
             background-origin: content-box;
 
-            
+
 
         }
 
@@ -49,7 +49,7 @@
             display: flex;
             justify-content: center;
             align-items: end;
-            
+
 
         }
 
@@ -65,14 +65,29 @@
 
             <h2 class="login">Login</h2>
 
-            <div class="id"><input type="text" placeholder="Enter Id:"></div>
-            <div class="password"> <input type="text" placeholder="Enter Password"></div>
-            <div class="submit" ><button  type="submit" > Submit</button></div>
+            <div class="id"><input type="text" id="username" placeholder="Enter User Name:"></div>
+            <div class="password"> <input type="text" id="password" placeholder="Enter Password"></div>
+            <div class="submit"><button onclick="fakeLogin()"> Submit</button></div>
             <div class="forgetpass">
                 <p>Forget password? <a href="">click</a></p>
             </div>
         </div>
     </div>
+    <script>
+        function fakeLogin() {
+            const user = document.getElementById("username").value;
+            const pass = document.getElementById("password").value;
+
+            // Simulated login (hardcoded)
+            if (user === "admin" && pass === "admin123") {
+                window.location.href = "admindashboard.html";
+            } else if (user === "customer" && pass === "cust123") {
+                window.location.href = "customerdashboard.html";
+            } else {
+                alert("Invalid credentials!");
+            }
+        }
+    </script>
 
 </body>
 

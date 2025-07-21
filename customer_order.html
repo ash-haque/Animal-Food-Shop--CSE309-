@@ -1,64 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        .parent{
-            height: 100vh;
-            background-color: antiquewhite;
-        }
-        label{
-            display: block;
-            margin: 20px;
-            font-weight: bold;
-        }
-        textarea{
-            padding: 30px;
-            width: 40%;
-            border-radius: 10px;
-        }
-        .order{
-            margin: 100px;
-        }
-        h2{
-            color: red;
-        }
-        .button{
-            width: 10%;
-            
-        }
-        a{
-            color: brown;
-            font-weight: bold;
-            text-decoration: none;
-            
-        }
-        a:hover{
-            background-color: antiquewhite;
+  <meta charset="UTF-8">
+  <title>My Orders</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fdfdfd;
+      margin: 0;
+      padding: 20px;
+    }
 
-        }
-        
-    </style>
+    header {
+      background-color: #f59393;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    .section {
+      margin: 40px auto;
+      max-width: 900px;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+    }
+
+    table th, table td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    table th {
+      background-color: #f2f2f2;
+    }
+
+    .status {
+      padding: 5px 10px;
+      border-radius: 4px;
+      color: white;
+      font-weight: bold;
+      font-size: 13px;
+    }
+
+    .status.ongoing {
+      background-color: orange;
+    }
+
+    .status.completed {
+      background-color: green;
+    }
+
+    .status.cancelled {
+      background-color: red;
+    }
+  </style>
 </head>
 <body>
-    <div class="parent">
-        <button><a href="customer_order.html">Back</a></button>
-        <div class="order">
-            <h2>Your Order List</h2>
-            <label for="previous order">Previous Order :</label>
-            <textarea name="" id=""></textarea>
-            <label for="Ongoing Order">Ongoing Order :</label>
-            <textarea name="" id=""></textarea>
-        </div>
 
-    </div>
-    
+  <header>🐾 My Orders</header>
+
+  <div class="section">
+    <h2>🟠 Ongoing Orders</h2>
+    <table>
+      <tr>
+        <th>Order ID</th>
+        <th>Date</th>
+        <th>Items</th>
+        <th>Total</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>#ORD1234</td>
+        <td>2025-07-15</td>
+        <td>Whiskas, Bird Seeds</td>
+        <td>৳820</td>
+        <td><span class="status ongoing">In Delivery</span></td>
+      </tr>
+      <tr>
+        <td>#ORD1238</td>
+        <td>2025-07-19</td>
+        <td>Dog Bone Chew</td>
+        <td>৳250</td>
+        <td><span class="status ongoing">Processing</span></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>✅ Previous Orders</h2>
+    <table>
+      <tr>
+        <th>Order ID</th>
+        <th>Date</th>
+        <th>Items</th>
+        <th>Total</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>#ORD1229</td>
+        <td>2025-07-10</td>
+        <td>Cat Tuna, Fish Flakes</td>
+        <td>৳530</td>
+        <td><span class="status completed">Delivered</span></td>
+      </tr>
+      <tr>
+        <td>#ORD1212</td>
+        <td>2025-06-25</td>
+        <td>Drools Puppy</td>
+        <td>৳320</td>
+        <td><span class="status completed">Delivered</span></td>
+      </tr>
+      <tr>
+        <td>#ORD1205</td>
+        <td>2025-06-10</td>
+        <td>Bird Pellets</td>
+        <td>৳190</td>
+        <td><span class="status cancelled">Cancelled</span></td>
+      </tr>
+    </table>
+  </div>
+
 </body>
 </html>
