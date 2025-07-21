@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animal Clothes</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #84b6f4;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 20%;
+      background-color: #f2f2f2;
+      padding: 20px;
+      border-right: 2px solid #ddd;
+    }
+
+    .sidebar h3 {
+      margin-bottom: 15px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin: 10px 0;
+      padding: 8px;
+      background-color: #dceaff;
+      border-radius: 4px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .sidebar ul li:hover {
+      background-color: #b5d6f6;
+    }
+
+    .main-content {
+      width: 80%;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      background-color: #fff;
+      overflow-y: auto;
+    }
+
+    .cloth-card {
+      width: calc(33.33% - 20px);
+      background-color: #fafafa;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .cloth-card a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .cloth-card a:hover {
+      color: #84b6f4;
+    }
+
+    .cloth-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .cloth-card p {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar, .main-content {
+        width: 100%;
+      }
+
+      .cloth-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    👕 Animal Clothes Store
+  </header>
+
+  <div class="container">
+    <div class="sidebar">
+      <h3>Clothing Categories</h3>
+      <ul>
+        <li onclick="filterClothes('all')">All</li>
+        <li onclick="filterClothes('dog')">Dog Clothes</li>
+        <li onclick="filterClothes('cat')">Cat Clothes</li>
+        
+        
+      </ul>
+    </div>
+
+    <div class="main-content" id="clothContainer">
+      <!-- Dog Clothes -->
+      <div class="cloth-card dog">
+        <a href="customer_placeOrder.html">
+          <img src="Winter Dog Sweater.jpeg" alt="Dog Sweater">
+          <p>Winter Dog Sweater</p>
+        </a>
+      </div>
+      <div class="cloth-card dog">
+        <a href="customer_placeOrder.html">
+          <img src="dog raincoat.jpeg" alt="Dog Raincoat">
+          <p>Dog Raincoat</p>
+        </a>
+      </div>
+
+      <!-- Cat Clothes -->
+      <div class="cloth-card cat">
+        <a href="customer_placeOrder.html">
+          <img src="Cozy cat.jpeg" alt="Cat Hoodie">
+          <p>Cozy Cat Hoodie</p>
+        </a>
+      </div>
+      <div class="cloth-card cat">
+        <a href="customer_placeOrder.html">
+          <img src="Floral Cat Shirt.jpeg" alt="Cat Shirt">
+          <p>Floral Cat Shirt</p>
+        </a>
+      </div>
+
+    
+    </div>
+  </div>
+
+  <script>
+    function filterClothes(category) {
+      const allCards = document.querySelectorAll('.cloth-card');
+
+      allCards.forEach(card => {
+        if (category === 'all') {
+          card.style.display = 'block';
+        } else {
+          card.classList.contains(category)
+            ? card.style.display = 'block'
+            : card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
+
+

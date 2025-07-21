@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Animal Food Categories</title>
+  <title>Animal Toys</title>
   <style>
     body {
       margin: 0;
@@ -10,8 +10,8 @@
     }
 
     header {
-      background-color: bisque;
-      color: black;
+      background-color: #84b6f4;
+      color: white;
       padding: 20px;
       text-align: center;
       font-size: 24px;
@@ -41,14 +41,14 @@
     .sidebar ul li {
       margin: 10px 0;
       padding: 8px;
-      background-color: #e0e0e0;
+      background-color: #dceaff;
       border-radius: 4px;
       cursor: pointer;
       text-align: center;
     }
 
     .sidebar ul li:hover {
-      background-color: #d0d0d0;
+      background-color: #b5d6f6;
     }
 
     .main-content {
@@ -61,7 +61,7 @@
       overflow-y: auto;
     }
 
-    .food-card {
+    .toy-card {
       width: calc(33.33% - 20px);
       background-color: #fafafa;
       border: 1px solid #ccc;
@@ -71,23 +71,23 @@
       text-align: center;
     }
 
-    .food-card a {
+    .toy-card a {
       text-decoration: none;
       color: inherit;
     }
 
-    .food-card a:hover {
-      color: #f59393;
+    .toy-card a:hover {
+      color: #84b6f4;
     }
 
-    .food-card img {
+    .toy-card img {
       width: 100%;
       height: 150px;
       object-fit: cover;
       border-radius: 4px;
     }
 
-    .food-card p {
+    .toy-card p {
       margin-top: 10px;
       font-weight: bold;
     }
@@ -101,101 +101,100 @@
         width: 100%;
       }
 
-      .food-card {
+      .toy-card {
         width: 100%;
       }
-    }
-    a{
-      text-decoration: none;
     }
   </style>
 </head>
 <body>
 
   <header>
-    🐾 Animal Food Shop - Categories 🐾
+    🧸 Animal Toy Store
   </header>
 
   <div class="container">
     <div class="sidebar">
-      <h3>Categories</h3>
+      <h3>Toy Categories</h3>
       <ul>
-        <li onclick="filterFood('all')">All</li>
-        <li onclick="filterFood('cat')">Cat Foods</li>
-        <li onclick="filterFood('dog')">Dog Foods</li>
-        <li onclick="filterFood('bird')">Bird Foods</li>
-        <li onclick="filterFood('fish')">Fish Foods</li>
-        <li><a href="cust_product_cate_toy.html">Animal Toy</a></li>
-        <li><a href="custo_pro_cate_clothes.html">Animal Clothes</a></li>
+        <li onclick="filterToys('all')">All</li>
+        <li onclick="filterToys('dog')">Dog Toys</li>
+        <li onclick="filterToys('cat')">Cat Toys</li>
+        <li onclick="filterToys('bird')">Bird Toys</li>
+        <li onclick="filterToys('fish')">Fish Toys</li>
       </ul>
     </div>
 
-    <div class="main-content" id="foodContainer">
-      <!-- Each card has clickable image + food name -->
-      <div class="food-card cat">
+    <div class="main-content" id="toyContainer">
+      <!-- Dog Toys -->
+      <div class="toy-card dog">
         <a href="customer_placeOrder.html">
-          <img src="Cat Tuna Treat pic.jpeg" alt="Cat Food 1">
-          <p>Cat Tuna Treat</p>
+          <img src="dog chew ball.jpeg" alt="Dog Toy 1">
+          <p>Dog Chew Ball</p>
         </a>
       </div>
-      <div class="food-card cat">
+      <div class="toy-card dog">
         <a href="customer_placeOrder.html">
-          <img src="Whiskas Chicken pic.jpeg" alt="Cat Food 2">
-          <p>Whiskas Chicken</p>
+          <img src="Rope Tug Toy.jpeg" alt="Dog Toy 2">
+          <p>Rope Tug Toy</p>
         </a>
       </div>
-      <div class="food-card dog">
+
+      <!-- Cat Toys -->
+      <div class="toy-card cat">
         <a href="customer_placeOrder.html">
-          <img src="Pedigree Adult pic.jpeg" alt="Dog Food 1">
-          <p>Pedigree Adult</p>
+          <img src="feather teaser.jpeg" alt="Cat Toy 1">
+          <p>Feather Teaser</p>
         </a>
       </div>
-      <div class="food-card dog">
+      <div class="toy-card cat">
         <a href="customer_placeOrder.html">
-          <img src="Drools Puppy picture.jpeg" alt="Dog Food 2">
-          <p>Drools Puppy</p>
+          <img src="Mouse Plush Toy.jpeg" alt="Cat Toy 2">
+          <p>Mouse Plush Toy</p>
         </a>
       </div>
-      <div class="food-card bird">
+
+      <!-- Bird Toys -->
+      <div class="toy-card bird">
         <a href="customer_placeOrder.html">
-          <img src="Bird Seeds Mix picture.jpeg" alt="Bird Food 1">
-          <p>Bird Seeds Mix</p>
+          <img src="Bird Swing.jpeg" alt="Bird Toy 1">
+          <p>Bird Swing</p>
         </a>
       </div>
-      <div class="food-card bird">
+      <div class="toy-card bird">
         <a href="customer_placeOrder.html">
-          <img src="Parrot Pellets pictures.jpg" alt="Bird Food 2">
-          <p>Parrot Pellets</p>
+          <img src="Bell Cage Toy.jpeg" alt="Bird Toy 2">
+          <p>Bell Cage Toy</p>
         </a>
       </div>
-      <div class="food-card fish">
+
+      <!-- Fish Toys -->
+      <div class="toy-card fish">
         <a href="customer_placeOrder.html">
-          <img src="Goldfish Flakes pictures fish food.png" alt="Fish Food 1">
-          <p>Goldfish Flakes</p>
+          <img src="Aquarium Decor.jpeg" alt="Fish Toy 1">
+          <p>Aquarium Decor</p>
         </a>
       </div>
-      <div class="food-card fish">
+      <div class="toy-card fish">
         <a href="customer_placeOrder.html">
-          <img src="Tropical Fish Bits bird food.jpg" alt="Fish Food 2">
-          <p>Tropical Fish Bits</p>
+          <img src="floting toy.jpeg" alt="Fish Toy 2">
+          <p>Floating Toy</p>
         </a>
       </div>
     </div>
   </div>
 
   <script>
-    function filterFood(category) {
-      const allCards = document.querySelectorAll('.food-card');
+    function filterToys(category) {
+      const allCards = document.querySelectorAll('.toy-card');
 
       allCards.forEach(card => {
         if (category === 'all') {
           card.style.display = 'block';
         } else {
-          if (card.classList.contains(category)) {
-            card.style.display = 'block';
-          } else {
-            card.style.display = 'none';
-          }
+          card.classList.contains(category)
+            ? card.style.display = 'block'
+            : card.style.display = 'none';
         }
       });
     }
@@ -203,3 +202,4 @@
 
 </body>
 </html>
+
